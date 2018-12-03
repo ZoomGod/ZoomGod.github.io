@@ -82,6 +82,7 @@ deploy:
   type: git
   repo:
     github: https://github.com/ZoomGod/ZoomGod.github.io.git
+    coding: https://git.coding.net/herm1t/herm1t.git
     branch: master
 #头像
 avatar: /images/phantom.png
