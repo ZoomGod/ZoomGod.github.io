@@ -46,7 +46,7 @@
 
 
 {% if theme.baidu_site_verification %}
-  <meta name="baidu-site-verification" content="fJPtjMS116" />
+  <meta name="baidu-site-verification" content="dDN06TPsgc" />
 {% endif %}
 
 
