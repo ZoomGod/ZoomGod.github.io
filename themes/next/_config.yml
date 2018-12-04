@@ -162,8 +162,9 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 links:
-  moeKiwiSAMA: https://nyan.kiwi.cat/
   bubug: https://bubug.github.io/ 
+  Loki: https://archdukeloki.github.io/
+  moeKiwiSAMA: https://nyan.kiwi.cat/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
