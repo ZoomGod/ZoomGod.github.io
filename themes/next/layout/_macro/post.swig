@@ -333,7 +333,11 @@
     {#####################}
     {### END POST BODY ###}
     {#####################}
-
+    <div>
+      {% if not is_index %}
+        {% include 'my-copyright.swig' %}
+      {% endif %}
+    </div>
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>
         {% include 'wechat-subscriber.swig' %}
@@ -399,7 +403,11 @@
         </div>
       {% endif %}
       {% endif %}
-
+      <div>
+          {% if not is_index %}
+          {% include 'passage-end-tag.swig' %}
+          {% endif %}
+      </div>
       {% if not is_index and (post.prev or post.next) %}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">

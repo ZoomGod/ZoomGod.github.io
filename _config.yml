@@ -13,9 +13,9 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://herm1t.tk
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:title/ #:category/:title/ 
 permalink_defaults:
 
 # Directory
@@ -84,5 +84,49 @@ deploy:
     github: https://github.com/ZoomGod/ZoomGod.github.io.git
     coding: https://git.coding.net/herm1t/herm1t.git
     branch: master
+
 #头像
 avatar: /images/phantom.png
+
+# feed
+# Dependencies: https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+
+#live2d:
+#      enable: true
+#      scriptFrom: local
+#      model:
+#        scale: 1
+#        hHeadPos: 0.5
+#        vHeadPos: 0.618
+#      display:
+#        superSample: 2
+#        width: 150
+#        height: 300
+#        position: right
+#        hOffset: 0
+#        vOffset: -20
+#     mobile:
+#        show: false
+#      react:
+#        opacityDefault: 0.5
+#        opacityOnHover: 0.
+
+#版本号
+#{% if theme.footer.powered and theme.footer.theme.enable %}
+#  <span class="post-meta-divider">|</span>
+#{% endif %}
+#
+#{% if theme.footer.theme.enable %}
+#  <div class="theme-info">{#
+#  #}{{ __('footer.theme') }} &mdash; {#
+#  #}<a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">{#
+#    #}NexT.{{ theme.scheme }}{#
+#  #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
+#}</div>
+#{% endif %}
