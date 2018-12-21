@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Herm1t</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://herm1t.tk/"/>
+  <updated>2018-12-21T08:53:29.470Z</updated>
+  <id>http://herm1t.tk/</id>
+  
+  <author>
+    <name>Herm1t</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql基础</title>
+    <link href="http://herm1t.tk/mysql/mysql%E5%9F%BA%E7%A1%80/"/>
+    <id>http://herm1t.tk/mysql/mysql基础/</id>
+    <published>2018-12-21T08:16:13.000Z</published>
+    <updated>2018-12-21T08:53:29.470Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;拿着我写好的文档给工作室成员上mysql课程&lt;br&gt;被一些人吐槽我的文档写的很详细了，我完全可以不用讲&lt;br&gt;也看到一些人我还在讲上面，他已经默默的看着文档做到最后了&lt;br&gt;手动一个一脸无奈的表情&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要做的准备&lt;/li&gt;
+&lt;li&gt;数据库的基本操作&lt;/li&gt;
+&lt;li&gt;库的操作&lt;/li&gt;
+&lt;li&gt;表的操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感觉格式上有一点点乱，还需要多加练习:)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://herm1t.tk/categories/mysql/"/>
+    
+    
+      <category term="mysql基础" scheme="http://herm1t.tk/tags/mysql%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始搭博客[1]--进阶篇</title>
+    <link href="http://herm1t.tk/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B1%5D--%E8%BF%9B%E9%98%B6%E7%AF%87/"/>
+    <id>http://herm1t.tk/blog搭建/从零开始搭博客[1]--进阶篇/</id>
+    <published>2018-12-04T14:37:07.000Z</published>
+    <updated>2018-12-21T08:53:11.646Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;可以了，你现在已经很接近大佬了&lt;br&gt;那么我们来优化一下我们的私人博客&lt;br&gt;&lt;del&gt;想了想，自己重复造轮子的意义不大&lt;/del&gt;&lt;br&gt;而且搜集中发现了很多优秀的博客，已经讲的非常详细了&lt;br&gt;那么，本篇会讲解一些基本配置以及更换主题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;一些基本概念&lt;/li&gt;
+&lt;li&gt;一些基本配置&lt;/li&gt;
+&lt;li&gt;如何更换主题&lt;/li&gt;
+&lt;li&gt;安利一些博客(Next主题为主)&lt;/li&gt;
+&lt;li&gt;后话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那么，我们开始吧!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="blog搭建" scheme="http://herm1t.tk/categories/blog%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="blog进阶" scheme="http://herm1t.tk/tags/blog%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零开始搭博客[0]--基础篇</title>
+    <link href="http://herm1t.tk/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B0%5D--%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+    <id>http://herm1t.tk/blog搭建/从零开始搭博客[0]--基础篇/</id>
+    <published>2018-12-03T14:56:17.000Z</published>
+    <updated>2018-12-21T08:53:04.213Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;作为一个大佬，私人博客必不可少&lt;br&gt;那么，教大家&lt;del&gt;5分钟&lt;/del&gt;做出私人博客 &lt;strong&gt;[完全免费]&lt;/strong&gt;&lt;br&gt;只需&lt;del&gt;短短&lt;/del&gt;四步，即可搭出可以使用的私人博客&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要做的准备&lt;/li&gt;
+&lt;li&gt;第一步:装装装&lt;/li&gt;
+&lt;li&gt;第二步:配配配&lt;/li&gt;
+&lt;li&gt;第三步:改改改&lt;/li&gt;
+&lt;li&gt;第四步:写写写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是不是看起来很简单，尝试一下吧!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="blog搭建" scheme="http://herm1t.tk/categories/blog%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="blog基础" scheme="http://herm1t.tk/tags/blog%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>索引</title>
+    <link href="http://herm1t.tk/uncategorized/%E7%B4%A2%E5%BC%95/"/>
+    <id>http://herm1t.tk/uncategorized/索引/</id>
+    <published>2018-11-12T14:51:36.000Z</published>
+    <updated>2018-12-21T08:59:12.604Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;あたしの上には太阳なんかなかった。いつも夜。でも暗くはなかった。太阳に代わるものがあったから。太阳ほど明るくはないけれど、あたしには十分だった。あたしはその光によって、夜を昼と思って生きてくることができたの。あたしには最初から太阳なんかなかった。だから失う恐怖もないの&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="索引" scheme="http://herm1t.tk/tags/%E7%B4%A2%E5%BC%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://herm1t.tk/uncategorized/hello-world/"/>
+    <id>http://herm1t.tk/uncategorized/hello-world/</id>
+    <published>2018-11-11T14:51:36.000Z</published>
+    <updated>2018-12-03T15:45:59.507Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
