@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="JhguOj1MQi">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="mysql基础,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Herm1t" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="拿着我写好的文档给工作室成员上mysql课程被一些人吐槽我的文档写的很详细了，我完全可以不用讲也看到一些人我还在讲上面，他已经默默的看着文档做到最后了手动一个一脸无奈的表情  概览 需要做的准备 数据库的基本操作 库的操作 表的操作   感觉格式上有一点点乱，还需要多加练习:)">
+<meta name="keywords" content="mysql基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql基础">
+<meta property="og:url" content="http://herm1t.tk/mysql/mysql基础/index.html">
+<meta property="og:site_name" content="Herm1t">
+<meta property="og:description" content="拿着我写好的文档给工作室成员上mysql课程被一些人吐槽我的文档写的很详细了，我完全可以不用讲也看到一些人我还在讲上面，他已经默默的看着文档做到最后了手动一个一脸无奈的表情  概览 需要做的准备 数据库的基本操作 库的操作 表的操作   感觉格式上有一点点乱，还需要多加练习:)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-21T08:53:29.470Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql基础">
+<meta name="twitter:description" content="拿着我写好的文档给工作室成员上mysql课程被一些人吐槽我的文档写的很详细了，我完全可以不用讲也看到一些人我还在讲上面，他已经默默的看着文档做到最后了手动一个一脸无奈的表情  概览 需要做的准备 数据库的基本操作 库的操作 表的操作   感觉格式上有一点点乱，还需要多加练习:)">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://herm1t.tk/mysql/mysql基础/">
+
+
+
+
+
+  <title>mysql基础 | Herm1t</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/ZoomGod" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Herm1t</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://herm1t.tk/mysql/mysql基础/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Herm1t">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/phantom.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Herm1t">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">mysql基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-21T16:16:13+08:00">
+                2018-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>拿着我写好的文档给工作室成员上mysql课程<br>被一些人吐槽我的文档写的很详细了，我完全可以不用讲<br>也看到一些人我还在讲上面，他已经默默的看着文档做到最后了<br>手动一个一脸无奈的表情</p>
+</blockquote>
+<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><ul>
+<li>需要做的准备</li>
+<li>数据库的基本操作</li>
+<li>库的操作</li>
+<li>表的操作</li>
+</ul>
+<blockquote>
+<p>感觉格式上有一点点乱，还需要多加练习:)</p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<h2 id="需要做的准备"><a href="#需要做的准备" class="headerlink" title="需要做的准备"></a>需要做的准备</h2><p><strong>[+] 安装好mysql(xampp之类的都可以)</strong><br><strong>[+] 将mysql加至环境变量中(方便直接在命令行里使用mysql)</strong><br><strong>[+] 文中斜杠表示选择其一，而不是加上斜杠照打-.-</strong></p>
+<hr>
+<h2 id="数据库的基本操作"><a href="#数据库的基本操作" class="headerlink" title="数据库的基本操作"></a>数据库的基本操作</h2><ul>
+<li>登陆(默认情况)</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mysql -u root -p	<span class="comment">#默认没有密码</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改密码(shell模式下)</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mysqladmin -u root -p 旧密码(默认为空) password 123456	<span class="comment"># -p后面为旧密码，password后面为新密码</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>退出</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><blockquote>
+<p>mysql关键字不区分大小写，但是一般推荐关键字用大写以便于区分</p>
+<p>用户相关数据存储在mysql库中的user表内，可自行查看<del>或修改</del></p>
+</blockquote>
+<ul>
+<li>创建用户</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'admin'</span>/<span class="string">'admin'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'password'</span>;	<span class="comment">#单引号中内容按需求自行替换</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除用户</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> <span class="keyword">admin</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>赋予权限</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">select</span>/<span class="keyword">insert</span>/<span class="keyword">delete</span>/<span class="keyword">update</span>/ALL <span class="keyword">ON</span> test1/ *.* <span class="keyword">TO</span> <span class="string">'admin'</span>;		<span class="comment">#赋予什么权限用于什么库上</span></span><br></pre></td></tr></table></figure>
+<h3 id="数据库的备份与恢复"><a href="#数据库的备份与恢复" class="headerlink" title="数据库的备份与恢复"></a>数据库的备份与恢复</h3><ul>
+<li>备份数据库</li>
+</ul>
+<blockquote>
+<p>在shell模式下</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mysqldump -u root -p test1&gt;test1.sql 		<span class="comment">#任意后缀都可以(貌似)，用txt后缀可看出实际是如何备份的</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>恢复数据库</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mysql -u root -p test1&lt;test1.sql</span><br></pre></td></tr></table></figure>
+<h3 id="显示库-表"><a href="#显示库-表" class="headerlink" title="显示库/表"></a>显示库/表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">DATABASES</span>/<span class="keyword">TABLES</span>;		<span class="comment">#SHOW之类用复数，创建修改之类用单数</span></span><br></pre></td></tr></table></figure>
+<h2 id="库的操作"><a href="#库的操作" class="headerlink" title="库的操作"></a>库的操作</h2><ol>
+<li>创建数据库</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> test1;		<span class="comment">#创建一个名为test的数据库</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>删除数据库</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">DATABASE</span> test1;		<span class="comment">#删库然后跑路</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>打开数据库</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USE</span> test1;			<span class="comment">#引用指定库</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>有人会问怎么退出这个库。实际上这个操作更像是指向一个库而不是进入一个库，还是可以用SHOW DATABASES之类的</p>
+</blockquote>
+<h2 id="表的操作"><a href="#表的操作" class="headerlink" title="表的操作"></a>表的操作</h2><blockquote>
+<p>主要类型: INT(整数),CHAR/VARCHAR(字符串),DATE(日期)  </p>
+<p>CHAR和VARCHAR的区别:  </p>
+<blockquote>
+<p>CHAR长度固定，设了CHAR(10)的情况，不满会用空格补足到10位<br>VARCHAR长度可变，如数据长度为X，实际存储为X+1/2位(标识你输入的长度,超过255用2位,小于则1位)</p>
+</blockquote>
+<p>主要参数: NOT NULL(不能为空),AUTO_INCREMENT(自增),PRIMARY KEY(主键)</p>
+</blockquote>
+<ol>
+<li>创建表</li>
+</ol>
+<blockquote>
+<p>创建顺序:字段名 类型 额外选项(是否为空，默认值，是否自增，主键以及外键等等)</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">table</span> studio1(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">'noob'</span>,</span><br><span class="line">	age <span class="built_in">int</span>(<span class="number">3</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">18</span>,</span><br><span class="line">	birth <span class="built_in">DATE</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	kind <span class="built_in">CHAR</span>(<span class="number">15</span>)		<span class="comment">#最后一句则不需要逗号</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>删除表</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> studio1;</span><br></pre></td></tr></table></figure>
+<h3 id="对表结构的修改-ALTER"><a href="#对表结构的修改-ALTER" class="headerlink" title="对表结构的修改(ALTER)"></a>对表结构的修改(ALTER)</h3><ol>
+<li>查看表字段</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">COLUMNS</span> <span class="keyword">FROM</span> studio1;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>删除字段</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">DROP</span> kind;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>增加字段</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">ADD</span> sex <span class="built_in">INT</span>(<span class="number">1</span>);		<span class="comment">#默认插在最后</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">ADD</span> sex <span class="built_in">INT</span>(<span class="number">1</span>) <span class="keyword">FIRST</span>;	<span class="comment">#插在最前</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">ADD</span> sex <span class="built_in">INT</span>(<span class="number">1</span>) <span class="keyword">AFTER</span> age;	<span class="comment">#插在age字段后面</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>修改字段</li>
+</ol>
+<blockquote>
+<p>可用MODIFY或CHANGE子句</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">MODIFY</span> age <span class="built_in">INT</span>(<span class="number">2</span>);			<span class="comment">#MODIFY修改属性</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">CHANGE</span> sex gender <span class="built_in">VARCHAR</span>(<span class="number">6</span>);	<span class="comment">#CHANGE重命名及更改类型</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>修改默认值</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">ALTER</span> birth <span class="keyword">SET</span> <span class="keyword">DEFAULT</span> <span class="string">'2000-1-1'</span> ;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">ALTER</span> age <span class="keyword">DROP</span> <span class="keyword">DEFAULT</span>;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>修改表名</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> studio1 <span class="keyword">RENAME</span> <span class="keyword">TO</span> xxx;</span><br></pre></td></tr></table></figure>
+<h3 id="对表内容的操作-增删改查"><a href="#对表内容的操作-增删改查" class="headerlink" title="对表内容的操作(增删改查)"></a>对表内容的操作(增删改查)</h3><ol>
+<li>增</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> studio1</span><br><span class="line">	(<span class="keyword">name</span>,age,birth,gender)</span><br><span class="line">	<span class="keyword">VALUES</span></span><br><span class="line">	(<span class="string">"tom"</span>,<span class="number">17</span>,<span class="string">'2000-1-1'</span>,<span class="string">'male'</span>);</span><br><span class="line"><span class="comment">#两种方式皆可，第一种比较美观</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> studio1(<span class="keyword">name</span>,age,birth) <span class="keyword">VALUES</span>(<span class="string">"sam"</span>,<span class="number">16</span>,<span class="string">'2002-2-2'</span>,<span class="string">'male'</span>);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>删</li>
+</ol>
+<blockquote>
+<p>自增情况下删除数据会导致断层，创建的下一条数据不会补上你删除的id</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> studio1;		<span class="comment">#删除表内所有数据</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> studio1 <span class="keyword">WHERE</span> <span class="keyword">id</span>=<span class="number">1</span>;	<span class="comment">#主键具有唯一性，用来定位会比较准确</span></span><br><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> studio1;		<span class="comment">#清空表，自增也会从重新计数</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>改</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> studio1 <span class="keyword">SET</span> age=<span class="number">18</span> <span class="keyword">WHERE</span> <span class="keyword">name</span>=<span class="string">'tom'</span>;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>查(花式查法)</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age <span class="keyword">FROM</span> studio1;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio1 <span class="keyword">WHERE</span> <span class="keyword">id</span> <span class="keyword">IN</span> (<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>);</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio1 <span class="keyword">WHERE</span> <span class="keyword">id</span> <span class="keyword">BETWEEN</span> <span class="number">5</span> <span class="keyword">AND</span> <span class="number">10</span>;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio1 <span class="keyword">LIMIT</span> <span class="number">5</span>;		<span class="comment">#前5行</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio1 <span class="keyword">LIMIT</span> <span class="number">4</span>,<span class="number">5</span>;	<span class="comment">#从第4行开始的5行</span></span><br></pre></td></tr></table></figure>
+<h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio1 <span class="keyword">WHERE</span> birth <span class="keyword">LIKE</span> <span class="string">'2000%'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio1 <span class="keyword">ORDER</span> <span class="keyword">BY</span> age <span class="keyword">ASC</span>/<span class="keyword">DESC</span>;	<span class="comment">#默认ASC(升序),DESC为降序</span></span><br></pre></td></tr></table></figure>
+<h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><blockquote>
+<p>COUNT(计数),SUM(总和),AVG(平均)</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,<span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> studio1 <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">name</span>;  <span class="comment">#统计各个name出现次数</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>GROUP BY必须用在WHERE之后，ORDER BY之前</p>
+</blockquote>
+<h3 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h3><blockquote>
+<p>联合查询用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中<br>UNION默认删除重复数据，UNION ALL保留重复数据</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio1 <span class="keyword">UNION</span>/<span class="keyword">UNION</span> ALL <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> studio2;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>mysql基础</p>
+  <p><span>文章作者:</span>Herm1t</p>
+  <p><span>发布时间:</span>2018年12月21日 - 16:16:13</p>
+  <p><span>最后更新:</span>2018年12月21日 - 16:53:29</p>
+  <p><span>原始链接:</span><a href="/mysql/mysql基础/" title="mysql基础">http://herm1t.tk/mysql/mysql基础/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://herm1t.tk/mysql/mysql基础/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+      
+    </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>U know what I mean</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Herm1t 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Herm1t 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql基础/" rel="tag"># mysql基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+      <div>
+          
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束------</div>
+    
+</div>
+
+          
+      </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog搭建/从零开始搭博客[1]--进阶篇/" rel="next" title="从零开始搭博客[1]--进阶篇">
+                <i class="fa fa-chevron-left"></i> 从零开始搭博客[1]--进阶篇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTQ1MC8xNzk5Nw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/phantom.png" alt="Herm1t">
+            
+              <p class="site-author-name" itemprop="name">Herm1t</p>
+              <p class="site-description motion-element" itemprop="description">我不做安全啦JoJo</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ZoomGod" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://space.bilibili.com/4935848/#/" target="_blank" title="Bilibili">
+                      
+                        <i class="fa fa-fw fa-tv"></i>Bilibili</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/5511813845/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/ye-qu-di-qi-zhang-m/activities" target="_blank" title="zhihu">
+                      
+                        <i class="fa fa-fw fa-book"></i>zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://bubug.github.io/" title="bubug" target="_blank">bubug</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://archdukeloki.github.io/" title="Loki" target="_blank">Loki</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://nyan.kiwi.cat/" title="moeKiwiSAMA" target="_blank">moeKiwiSAMA</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需要做的准备"><span class="nav-number">2.</span> <span class="nav-text">需要做的准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的基本操作"><span class="nav-number">3.</span> <span class="nav-text">数据库的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户管理"><span class="nav-number">3.1.</span> <span class="nav-text">用户管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库的备份与恢复"><span class="nav-number">3.2.</span> <span class="nav-text">数据库的备份与恢复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示库-表"><span class="nav-number">3.3.</span> <span class="nav-text">显示库/表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#库的操作"><span class="nav-number">4.</span> <span class="nav-text">库的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的操作"><span class="nav-number">5.</span> <span class="nav-text">表的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对表结构的修改-ALTER"><span class="nav-number">5.1.</span> <span class="nav-text">对表结构的修改(ALTER)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对表内容的操作-增删改查"><span class="nav-number">5.2.</span> <span class="nav-text">对表内容的操作(增删改查)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模糊查询"><span class="nav-number">5.3.</span> <span class="nav-text">模糊查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序查询"><span class="nav-number">5.4.</span> <span class="nav-text">排序查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组查询"><span class="nav-number">5.5.</span> <span class="nav-text">分组查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联合查询"><span class="nav-number">5.6.</span> <span class="nav-text">联合查询</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-angellist"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Herm1t</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://herm1t.tk">替身使者</a> 强力驱动</div>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="true"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
