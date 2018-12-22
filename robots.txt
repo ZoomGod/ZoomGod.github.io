@@ -24,6 +24,6 @@ Disallow: /fancybox/
 
 
 
-Sitemap: http://yoursite.com/sitemap.xml
+Sitemap: https://herm1t.tk/sitemap.xml
 
-Sitemap: http://yoursite.com/baidusitemap.xml
+Sitemap: https://herm1t.tk/baidusitemap.xml
