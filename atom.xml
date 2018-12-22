@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://herm1t.tk/"/>
-  <updated>2018-12-21T08:53:29.470Z</updated>
+  <updated>2018-12-22T11:23:54.245Z</updated>
   <id>http://herm1t.tk/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac下安装pwntools</title>
+    <link href="http://herm1t.tk/MAC/mac%E4%B8%8B%E5%AE%89%E8%A3%85pwntools/"/>
+    <id>http://herm1t.tk/MAC/mac下安装pwntools/</id>
+    <published>2018-12-22T11:22:41.000Z</published>
+    <updated>2018-12-22T11:23:54.245Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;安装pwntools遇到好多问题，浪费了一晚上时间&lt;br&gt;各种百度无果,最后还是谷歌找到了一些大大的blog参照着解决的&lt;br&gt;这里整理一下自己安装过程中的问题&lt;br&gt;再给出合适的pwntools安装教程&lt;br&gt;希望以后能让别人少踩坑&lt;br&gt;此处主要是mac上的安装教程，别的操作系统仅供借鉴&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;避坑警告&lt;/li&gt;
+&lt;li&gt;安装pwntools&lt;/li&gt;
+&lt;li&gt;安装binutils(二进制工具)&lt;/li&gt;
+&lt;li&gt;总结&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="MAC" scheme="http://herm1t.tk/categories/MAC/"/>
+    
+    
+      <category term="安装pwntools" scheme="http://herm1t.tk/tags/%E5%AE%89%E8%A3%85pwntools/"/>
+    
+  </entry>
   
   <entry>
     <title>mysql基础</title>
