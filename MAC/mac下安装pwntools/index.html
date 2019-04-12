@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="Herm1t">
 <meta property="og:description" content="安装pwntools遇到好多问题，浪费了一晚上时间各种百度无果,最后还是谷歌找到了一些大大的blog参照着解决的这里整理一下自己安装过程中的问题再给出合适的pwntools安装教程希望以后能让别人少踩坑此处主要是mac上的安装教程，别的操作系统仅供借鉴  概览 避坑警告 安装pwntools 安装binutils(二进制工具) 总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-22T11:23:54.245Z">
+<meta property="og:updated_time" content="2019-04-12T16:16:32.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac下安装pwntools">
 <meta name="twitter:description" content="安装pwntools遇到好多问题，浪费了一晚上时间各种百度无果,最后还是谷歌找到了一些大大的blog参照着解决的这里整理一下自己安装过程中的问题再给出合适的pwntools安装教程希望以后能让别人少踩坑此处主要是mac上的安装教程，别的操作系统仅供借鉴  概览 避坑警告 安装pwntools 安装binutils(二进制工具) 总结">
@@ -416,6 +416,7 @@
 <p>前两者是安装matplotlib需要依赖nose和tornado，需要你自行安装<br>后者是mac自带sortedcontainers 1.5.10版本，需要你更新到3.0版本  </p>
 <p>还有是需要你自行把checksec,cyclic等命令行工具加入环境变量(WTF,我怎么知道你路径装在哪里了)  </p>
 <p>由于是mac自带的python，每一步都需要权限，每次都经过深思熟虑，深怕系统崩盘<br>经过步步操作，后面遇到更多的问题实在填不下去了，最后谷歌终于找到了友好的方法</p>
+<hr>
 <h2 id="安装pwntools"><a href="#安装pwntools" class="headerlink" title="安装pwntools"></a>安装pwntools</h2><blockquote>
 <p>强烈推荐用homebrew安装<br>homebrew是mac上不可或缺的大神器，安装方法直接用官网给的方法就行</p>
 </blockquote>
@@ -449,6 +450,7 @@
 </ol>
 <p>再次打开python，继续测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$  python2.7</span><br><span class="line">&gt;&gt;&gt;import pwn</span><br><span class="line">&gt;&gt;&gt;pwn.asm(&quot;xor eax,eax&quot;)</span><br><span class="line">&apos;1\xc0&apos;         #输出此项即表示没问题</span><br></pre></td></tr></table></figure></p>
 <p>此处正常情况应该会报错，提示你需要安装二进制工具binutils</p>
+<hr>
 <h2 id="安装binutils-二进制工具"><a href="#安装binutils-二进制工具" class="headerlink" title="安装binutils(二进制工具)"></a>安装binutils(二进制工具)</h2><p>同样使用homebrew即可快速安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install https://raw.githubusercontent.com/Gallopsled/pwntools-binutils/master/osx/binutils-$ARCH.rb</span><br></pre></td></tr></table></figure></p>
 <p><strong>关键来了</strong> 不要盲目复制,这里$ARCH需要替换成自己电脑的架构。<br>但是架构这玩意我百度半天没有一个能用的方法,最后本人使用了盲猜,现在电脑一般都是64位系统,所以盲猜了一手amd64，那么命令如下:(是的，我成功了)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install https://raw.githubusercontent.com/Gallopsled/pwntools-binutils/master/osx/binutils-amd64.rb</span><br></pre></td></tr></table></figure></p>
 <blockquote>
@@ -480,7 +482,7 @@
   <p><span>本文标题:</span>mac下安装pwntools</p>
   <p><span>文章作者:</span>Herm1t</p>
   <p><span>发布时间:</span>2018年12月22日 - 19:22:41</p>
-  <p><span>最后更新:</span>2018年12月22日 - 19:23:54</p>
+  <p><span>最后更新:</span>2019年04月13日 - 00:16:32</p>
   <p><span>原始链接:</span><a href="/MAC/mac下安装pwntools/" title="mac下安装pwntools">https://herm1t.tk/MAC/mac下安装pwntools/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://herm1t.tk/MAC/mac下安装pwntools/" aria-label="复制成功！"></i></span>
   </p>
@@ -575,6 +577,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/python/pipenv快速上手/" rel="prev" title="pipenv快速上手">
+                pipenv快速上手 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -657,7 +663,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -668,7 +674,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -679,7 +685,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

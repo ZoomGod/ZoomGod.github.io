@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="pipenv快速上手,">
 
 
 
@@ -90,17 +90,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="description" content="pipenv是目前为止最好用的python虚拟环境和包管理工具当你开始需要用python完成一些稍大一点的项目时，你就需要学会使用pipenv了   概览 需要做的准备  为什么需要使用pipenv  快速上手使用  了解pipenv的运行机制  后话">
+<meta name="keywords" content="pipenv快速上手">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://herm1t.tk/uncategorized/hello-world/index.html">
+<meta property="og:title" content="pipenv快速上手">
+<meta property="og:url" content="https://herm1t.tk/python/pipenv快速上手/index.html">
 <meta property="og:site_name" content="Herm1t">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="pipenv是目前为止最好用的python虚拟环境和包管理工具当你开始需要用python完成一些稍大一点的项目时，你就需要学会使用pipenv了   概览 需要做的准备  为什么需要使用pipenv  快速上手使用  了解pipenv的运行机制  后话">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-03T15:45:59.500Z">
+<meta property="og:updated_time" content="2019-04-12T16:21:58.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="pipenv快速上手">
+<meta name="twitter:description" content="pipenv是目前为止最好用的python虚拟环境和包管理工具当你开始需要用python完成一些稍大一点的项目时，你就需要学会使用pipenv了   概览 需要做的准备  为什么需要使用pipenv  快速上手使用  了解pipenv的运行机制  后话">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://herm1t.tk/uncategorized/hello-world/">
+  <link rel="canonical" href="https://herm1t.tk/python/pipenv快速上手/">
 
 
 
 
 
-  <title>Hello World | Herm1t</title>
+  <title>pipenv快速上手 | Herm1t</title>
   
 
 
@@ -275,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://herm1t.tk/uncategorized/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://herm1t.tk/python/pipenv快速上手/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Herm1t">
@@ -292,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">pipenv快速上手</h1>
         
 
         <div class="post-meta">
@@ -305,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-11T22:51:36+08:00">
-                2018-11-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-13T00:20:26+08:00">
+                2019-04-13
               </time>
             
 
@@ -315,6 +316,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -337,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  73
+                  1.1k
                 </span>
               
 
@@ -353,7 +376,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -374,15 +397,52 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <blockquote>
+<p>pipenv是目前为止最好用的python虚拟环境和包管理工具<br>当你开始需要用python完成一些稍大一点的项目时，你就需要学会使用pipenv了 </p>
+</blockquote>
+<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><ul>
+<li>需要做的准备 </li>
+<li>为什么需要使用pipenv </li>
+<li>快速上手使用 </li>
+<li>了解pipenv的运行机制 </li>
+<li>后话</li>
+</ul>
+<hr>
+<a id="more"></a> 
+<h2 id="需要做的准备"><a href="#需要做的准备" class="headerlink" title="需要做的准备"></a>需要做的准备</h2><p><strong>[+] 安装好python(最好是3x版本)</strong><br><strong>[+] 官方显示支持python2.7&amp;python3.4及以上版本</strong> </p>
+<hr>
+<h2 id="为什么需要使用pipenv"><a href="#为什么需要使用pipenv" class="headerlink" title="为什么需要使用pipenv"></a>为什么需要使用pipenv</h2><p><em>大家电脑中一般都会很自然的去安装最新版本的各种库，但是实际使用中有些开发环境需要使用到旧版本(一般是稳定的版本)。如果每次都降版本是个很麻烦的事，可能会影响到你平时的使用。所以需要虚拟环境来应对各种要求。</em></p>
+<blockquote>
+<p>ps:就是要优雅，不要让自己的电脑被弄的一团糟 </p>
+</blockquote>
+<hr>
+<h2 id="快速上手使用"><a href="#快速上手使用" class="headerlink" title="快速上手使用"></a>快速上手使用</h2><blockquote>
+<p>一切操作都只能在文件夹内使用: ) </p>
+</blockquote>
+<h3 id="安装pipenv"><a href="#安装pipenv" class="headerlink" title="安装pipenv"></a>安装pipenv</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">pip3 install pipenv</span><br><span class="line">brew install pipenv         <span class="comment">#mac也可以使用这种方法，官方推荐</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">### 创建一个文件夹来建立你的虚拟环境</span></span><br><span class="line">```sh</span><br><span class="line">mkdir xxx_pipenv            <span class="comment">#名称随便，但是做好管理很重要</span></span><br><span class="line"><span class="built_in">cd</span> xxx_pipenv</span><br><span class="line">pipenv install</span><br><span class="line"><span class="comment">#可以使用 pipenv install --python x.x 来指定使用的python版本，前提你电脑里有</span></span><br><span class="line">``` </span><br><span class="line">&gt;这时文件夹内会多出pipfile和pipfile.lock两个文件，用处参考后面的运行机制</span><br><span class="line"></span><br><span class="line"><span class="comment">### 安装所需要的库</span></span><br><span class="line">```sh</span><br><span class="line">pipenv install flask             <span class="comment">#安装最新版本的库及其依赖包</span></span><br><span class="line">pipenv install flask==xxx        <span class="comment">#安装指定版本</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">### 查看已安装的库及其依赖图</span></span><br><span class="line">```sh</span><br><span class="line">pipenv graph</span><br></pre></td></tr></table></figure>
+<h3 id="使用虚拟环境运行py文件"><a href="#使用虚拟环境运行py文件" class="headerlink" title="使用虚拟环境运行py文件"></a>使用虚拟环境运行py文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pipenv run python xxx.py</span><br><span class="line"><span class="comment">#使用pipenv shell可以激活虚拟环境shell，可以省去pipenv run前缀</span></span><br></pre></td></tr></table></figure>
+<h3 id="检查安全性"><a href="#检查安全性" class="headerlink" title="检查安全性"></a>检查安全性</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv check            <span class="comment">#感觉没什么用，but每次安装完运行一下会显得你比较专业</span></span><br></pre></td></tr></table></figure>
+<h3 id="删除不需要的库"><a href="#删除不需要的库" class="headerlink" title="删除不需要的库"></a>删除不需要的库</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv uninstall xxx</span><br></pre></td></tr></table></figure>
+<h3 id="移除虚拟环境"><a href="#移除虚拟环境" class="headerlink" title="移除虚拟环境"></a>移除虚拟环境</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv --rm</span><br></pre></td></tr></table></figure>
+<h3 id="一些查询语法"><a href="#一些查询语法" class="headerlink" title="一些查询语法"></a>一些查询语法</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pipenv --<span class="built_in">where</span>          <span class="comment">#效果等同于pwd，查看当前路径</span></span><br><span class="line">pipenv --venv           <span class="comment">#显示虚拟环境路径</span></span><br><span class="line">pipenv --py             <span class="comment">#显示虚拟环境使用的python路径</span></span><br><span class="line">pipenv --bare           <span class="comment">#精简操作手册</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>还有一些命令感觉并不常用，就不写了，想了解的可以pipenv –bare查看<br>当然最全的就是去查看官方文档啦</p>
+</blockquote>
+<hr>
+<h2 id="了解pipenv的运行机制"><a href="#了解pipenv的运行机制" class="headerlink" title="了解pipenv的运行机制"></a>了解pipenv的运行机制</h2><blockquote>
+<p>pipenv的核心围绕着pipfile和pipfile.lock这两个文件<br>创建pipenv时会判断文件夹内是否存在这两个文件，不存在会自动创建<br>若存在则会读取内容，因此可以拿来移植给他人复现你的虚拟环境</p>
+</blockquote>
+<p><strong>首先来看pipfile这个文件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[[source]]</span><br><span class="line">name = &quot;pypi&quot;</span><br><span class="line">url = &quot;https://pypi.org/simple&quot;</span><br><span class="line">verify_ssl = true</span><br><span class="line"></span><br><span class="line">[dev-packages]</span><br><span class="line"></span><br><span class="line">[packages]</span><br><span class="line">flask = &quot;*&quot;</span><br><span class="line"></span><br><span class="line">[requires]</span><br><span class="line">python_version = &quot;3.7&quot;</span><br></pre></td></tr></table></figure></p>
+<p>首先看<code>[source]</code><br>别的无关紧要，url这边一眼就可以看出是对应的pypi源，官方源比较慢，可以换成国内源，如下修改即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = &quot;https://pypi.tuna.tsinghua.edu.cn/simple&quot;</span><br></pre></td></tr></table></figure></p>
+<p>然后是<code>[dev-packages]</code><br>意为开发-包。在你把pipfile给别人时，这里面记录的包不会被自动安装，一般用来放一些开发是用到的辅助测试之类的库(猜测)<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv install xxx --dev        <span class="comment">#安装时记录进[dev-packages]</span></span><br></pre></td></tr></table></figure></p>
+<p>那么<code>[packages]</code>就很好理解了，前面我们示例安装了flask最新版，packages中就记录了这一点，其他人使用你的pipfile时也会去下载对应库及版本</p>
+<p>最后是<code>[requires]</code>，里面记录了基础需求，也就是会被必然下载的部分 </p>
+<blockquote>
+<p>此时会有一个疑问:我安装的flask目前是最新的，但是移植给别人时可能已经不是最新的了，这不就会出问题嘛。这时pipfile.lock的作用就来了</p>
+</blockquote>
+<p><code>pipfile.lock</code>中记录了你安装的所有的库及其版本号的hash，在新的环境中安装时会去匹配hash，这样就可以保证每次安装出来的环境是一样的</p>
+<hr>
+<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>pipenv的使用其实还是非常简洁易上手的，然而我学习使用时还是依靠百度了N个网页233(太多不靠谱的了！)<br>然后还是推荐配合pycharm来使用，不然每次都要pipenv run python xxx 或者pipenv shell开虚拟环境shell。这种事情…还是交给IDE来做就好啦</p>
 
       
     </div>
@@ -392,6 +452,38 @@
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>pipenv快速上手</p>
+  <p><span>文章作者:</span>Herm1t</p>
+  <p><span>发布时间:</span>2019年04月13日 - 00:20:26</p>
+  <p><span>最后更新:</span>2019年04月13日 - 00:21:58</p>
+  <p><span>原始链接:</span><a href="/python/pipenv快速上手/" title="pipenv快速上手">https://herm1t.tk/python/pipenv快速上手/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://herm1t.tk/python/pipenv快速上手/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
 
       
     </div>
@@ -432,6 +524,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/pipenv快速上手/" rel="tag"># pipenv快速上手</a>
+          
+        </div>
+      
 
       
       
@@ -450,15 +548,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/MAC/mac下安装pwntools/" rel="next" title="mac下安装pwntools">
+                <i class="fa fa-chevron-left"></i> mac下安装pwntools
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/uncategorized/索引/" rel="prev" title="索引">
-                索引 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -654,7 +752,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需要做的准备"><span class="nav-number">2.</span> <span class="nav-text">需要做的准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要使用pipenv"><span class="nav-number">3.</span> <span class="nav-text">为什么需要使用pipenv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速上手使用"><span class="nav-number">4.</span> <span class="nav-text">快速上手使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装pipenv"><span class="nav-number">4.1.</span> <span class="nav-text">安装pipenv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用虚拟环境运行py文件"><span class="nav-number">4.2.</span> <span class="nav-text">使用虚拟环境运行py文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查安全性"><span class="nav-number">4.3.</span> <span class="nav-text">检查安全性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除不需要的库"><span class="nav-number">4.4.</span> <span class="nav-text">删除不需要的库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移除虚拟环境"><span class="nav-number">4.5.</span> <span class="nav-text">移除虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些查询语法"><span class="nav-number">4.6.</span> <span class="nav-text">一些查询语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#了解pipenv的运行机制"><span class="nav-number">5.</span> <span class="nav-text">了解pipenv的运行机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后话"><span class="nav-number">6.</span> <span class="nav-text">后话</span></a></li></ol></div>
             
 
           </div>
