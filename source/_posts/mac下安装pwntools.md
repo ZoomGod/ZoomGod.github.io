@@ -44,6 +44,8 @@ intervaltree 3.0.2 has requirement sortedcontainers<3.0,>=2.0, but you'll have s
 由于是mac自带的python，每一步都需要权限，每次都经过深思熟虑，深怕系统崩盘
 经过步步操作，后面遇到更多的问题实在填不下去了，最后谷歌终于找到了友好的方法
 
+***
+
 ## 安装pwntools
 
 >强烈推荐用homebrew安装  
@@ -120,6 +122,8 @@ $  python2.7
 '1\xc0'         #输出此项即表示没问题
 ```
 此处正常情况应该会报错，提示你需要安装二进制工具binutils
+
+***
 
 ## 安装binutils(二进制工具)
 
