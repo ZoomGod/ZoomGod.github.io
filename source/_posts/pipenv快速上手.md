@@ -29,26 +29,27 @@ categories: python
 ## 快速上手使用 
 >一切操作都只能在文件夹内使用: ) 
 
-### 安装pipenv
-```sh
+### 安装pipenv 
+```sh 
 pip3 install pipenv
 brew install pipenv         #mac也可以使用这种方法，官方推荐
-``` 
+```
 
 ### 创建一个文件夹来建立你的虚拟环境
-```sh
+```sh 
 mkdir xxx_pipenv            #名称随便，但是做好管理很重要
 cd xxx_pipenv
 pipenv install
 #可以使用 pipenv install --python x.x 来指定使用的python版本，前提你电脑里有
-``` 
+```
+
 >这时文件夹内会多出pipfile和pipfile.lock两个文件，用处参考后面的运行机制
 
 ### 安装所需要的库
 ```sh
 pipenv install flask             #安装最新版本的库及其依赖包
 pipenv install flask==xxx        #安装指定版本
-``` 
+```
 
 ### 查看已安装的库及其依赖图
 ```sh
