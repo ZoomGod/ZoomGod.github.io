@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://herm1t.tk/"/>
-  <updated>2019-04-12T16:31:51.378Z</updated>
+  <updated>2019-06-24T14:26:28.741Z</updated>
   <id>https://herm1t.tk/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>汇编速记</title>
+    <link href="https://herm1t.tk/bin/%E6%B1%87%E7%BC%96%E9%80%9F%E8%AE%B0/"/>
+    <id>https://herm1t.tk/bin/汇编速记/</id>
+    <published>2019-06-24T14:21:24.000Z</published>
+    <updated>2019-06-24T14:26:28.741Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;个人见解:&lt;br&gt;汇编方面所需的大概知识如下,以后想补充会再更新的(咕咕咕)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;汇编指令&lt;/li&gt;
+&lt;li&gt;寄存器(x86)&lt;/li&gt;
+&lt;li&gt;内存管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="bin" scheme="https://herm1t.tk/categories/bin/"/>
+    
+    
+      <category term="汇编" scheme="https://herm1t.tk/tags/%E6%B1%87%E7%BC%96/"/>
+    
+  </entry>
   
   <entry>
     <title>pipenv快速上手</title>
