@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://herm1t.tk/"/>
-  <updated>2019-06-24T15:17:25.407Z</updated>
+  <updated>2019-07-11T07:30:12.293Z</updated>
   <id>https://herm1t.tk/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis快速入门</title>
+    <link href="https://herm1t.tk/Redis/Redis%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <id>https://herm1t.tk/Redis/Redis快速入门/</id>
+    <published>2019-07-11T07:22:10.000Z</published>
+    <updated>2019-07-11T07:30:12.293Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;上班摸鱼之作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要做的准备&lt;/li&gt;
+&lt;li&gt;Redis连接&lt;/li&gt;
+&lt;li&gt;基本类型&lt;/li&gt;
+&lt;li&gt;List类型&lt;/li&gt;
+&lt;li&gt;SET类型&lt;/li&gt;
+&lt;li&gt;Sorted Sets类型&lt;/li&gt;
+&lt;li&gt;Hashes类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="Redis" scheme="https://herm1t.tk/categories/Redis/"/>
+    
+    
+      <category term="Redis基础" scheme="https://herm1t.tk/tags/Redis%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>汇编速记</title>

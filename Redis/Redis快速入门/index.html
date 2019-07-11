@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="安装pwntools,">
+  <meta name="keywords" content="Redis基础,">
 
 
 
@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="安装pwntools遇到好多问题，浪费了一晚上时间各种百度无果,最后还是谷歌找到了一些大大的blog参照着解决的这里整理一下自己安装过程中的问题再给出合适的pwntools安装教程希望以后能让别人少踩坑此处主要是mac上的安装教程，别的操作系统仅供借鉴  概览 避坑警告 安装pwntools 安装binutils(二进制工具) 总结">
-<meta name="keywords" content="安装pwntools">
+<meta name="description" content="上班摸鱼之作  概览 需要做的准备 Redis连接 基本类型 List类型 SET类型 Sorted Sets类型 Hashes类型">
+<meta name="keywords" content="Redis基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac下安装pwntools">
-<meta property="og:url" content="https://herm1t.tk/MAC/mac下安装pwntools/index.html">
+<meta property="og:title" content="Redis快速入门">
+<meta property="og:url" content="https://herm1t.tk/Redis/Redis快速入门/index.html">
 <meta property="og:site_name" content="Herm1t">
-<meta property="og:description" content="安装pwntools遇到好多问题，浪费了一晚上时间各种百度无果,最后还是谷歌找到了一些大大的blog参照着解决的这里整理一下自己安装过程中的问题再给出合适的pwntools安装教程希望以后能让别人少踩坑此处主要是mac上的安装教程，别的操作系统仅供借鉴  概览 避坑警告 安装pwntools 安装binutils(二进制工具) 总结">
+<meta property="og:description" content="上班摸鱼之作  概览 需要做的准备 Redis连接 基本类型 List类型 SET类型 Sorted Sets类型 Hashes类型">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T16:16:32.937Z">
+<meta property="og:updated_time" content="2019-07-11T07:30:12.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac下安装pwntools">
-<meta name="twitter:description" content="安装pwntools遇到好多问题，浪费了一晚上时间各种百度无果,最后还是谷歌找到了一些大大的blog参照着解决的这里整理一下自己安装过程中的问题再给出合适的pwntools安装教程希望以后能让别人少踩坑此处主要是mac上的安装教程，别的操作系统仅供借鉴  概览 避坑警告 安装pwntools 安装binutils(二进制工具) 总结">
+<meta name="twitter:title" content="Redis快速入门">
+<meta name="twitter:description" content="上班摸鱼之作  概览 需要做的准备 Redis连接 基本类型 List类型 SET类型 Sorted Sets类型 Hashes类型">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://herm1t.tk/MAC/mac下安装pwntools/">
+  <link rel="canonical" href="https://herm1t.tk/Redis/Redis快速入门/">
 
 
 
 
 
-  <title>mac下安装pwntools | Herm1t</title>
+  <title>Redis快速入门 | Herm1t</title>
   
 
 
@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://herm1t.tk/MAC/mac下安装pwntools/">
+    <link itemprop="mainEntityOfPage" href="https://herm1t.tk/Redis/Redis快速入门/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Herm1t">
@@ -293,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mac下安装pwntools</h1>
+          <h1 class="post-title" itemprop="name headline">Redis快速入门</h1>
         
 
         <div class="post-meta">
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-22T19:22:41+08:00">
-                2018-12-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-11T15:22:10+08:00">
+                2019-07-11
               </time>
             
 
@@ -329,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
+                  <a href="/categories/Redis/" itemprop="url" rel="index">
+                    <span itemprop="name">Redis</span>
                   </a>
                 </span>
 
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  824
                 </span>
               
 
@@ -376,7 +376,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  3
                 </span>
               
             </div>
@@ -398,70 +398,42 @@
 
       
         <blockquote>
-<p>安装pwntools遇到好多问题，浪费了一晚上时间<br>各种百度无果,最后还是谷歌找到了一些大大的blog参照着解决的<br>这里整理一下自己安装过程中的问题<br>再给出合适的pwntools安装教程<br>希望以后能让别人少踩坑<br>此处主要是mac上的安装教程，别的操作系统仅供借鉴</p>
+<p>上班摸鱼之作</p>
 </blockquote>
 <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><ul>
-<li>避坑警告</li>
-<li>安装pwntools</li>
-<li>安装binutils(二进制工具)</li>
-<li>总结</li>
+<li>需要做的准备</li>
+<li>Redis连接</li>
+<li>基本类型</li>
+<li>List类型</li>
+<li>SET类型</li>
+<li>Sorted Sets类型</li>
+<li>Hashes类型</li>
 </ul>
 <hr>
 <a id="more"></a>
-<h2 id="避坑警告"><a href="#避坑警告" class="headerlink" title="避坑警告"></a>避坑警告</h2><blockquote>
-<p><strong>尽量不要使用pip安装!</strong><br><strong>尽量不要使用pip安装!</strong><br><strong>尽量不要使用pip安装!</strong>  </p>
+<h2 id="需要做的准备"><a href="#需要做的准备" class="headerlink" title="需要做的准备"></a>需要做的准备</h2><p><strong>[+] 当然是先装个Redis出来啦,非常简单</strong><br><strong>[+] 自行了解一下Redis大概是个什么东西啦</strong><br><strong>[+] <a href="http://try.redis.io/" target="_blank" rel="noopener">http://try.redis.io/</a>可以在平台上进行练习啦</strong></p>
+<h2 id="Redis连接"><a href="#Redis连接" class="headerlink" title="Redis连接"></a>Redis连接</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h host -p port -a password</span><br></pre></td></tr></table></figure>
+<p>例:redis-cli -h 127.0.0.1 -p 6379 -a “mypass”</p>
+<h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><blockquote>
+<p>1为整形,”1”为字符串,字符串最好用””</p>
 </blockquote>
-<p>pip安装首先需要<code>sudo pip2 install pwntools --user</code>，不然安装到后面会提示权限不足.而且由于mac自带python2.7，pip安装会把pwntools所依赖的各种库直接安装到系统路径//Library/Python/2.7/site-packages中(乱).  </p>
-<p><strong>经过漫长等待</strong>之后会需要这些问题(个人遇到的问题)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">matplotlib 1.3.1 requires nose, which is not installed. </span><br><span class="line">matplotlib 1.3.1 requires tornado, which is not installed.  </span><br><span class="line">intervaltree 3.0.2 has requirement sortedcontainers&lt;3.0,&gt;=2.0, but you&apos;ll have sortedcontainers 1.5.10 which is incompatible.</span><br></pre></td></tr></table></figure></p>
-<p>前两者是安装matplotlib需要依赖nose和tornado，需要你自行安装<br>后者是mac自带sortedcontainers 1.5.10版本，需要你更新到3.0版本  </p>
-<p>还有是需要你自行把checksec,cyclic等命令行工具加入环境变量(WTF,我怎么知道你路径装在哪里了)  </p>
-<p>由于是mac自带的python，每一步都需要权限，每次都经过深思熟虑，深怕系统崩盘<br>经过步步操作，后面遇到更多的问题实在填不下去了，最后谷歌终于找到了友好的方法</p>
-<hr>
-<h2 id="安装pwntools"><a href="#安装pwntools" class="headerlink" title="安装pwntools"></a>安装pwntools</h2><blockquote>
-<p>强烈推荐用homebrew安装<br>homebrew是mac上不可或缺的大神器，安装方法直接用官网给的方法就行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&gt; SET hello "world"     #设置键值</span><br><span class="line">OK</span><br><span class="line">&gt; GET hello             #获取键的值</span><br><span class="line">"world"</span><br><span class="line">&gt; DEL hello             #删除键值</span><br><span class="line">(integer) 1</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; SET num 10            #INCR仅对整数类型有效</span><br><span class="line">OK</span><br><span class="line">&gt; INCR num              #自增,结果为11</span><br><span class="line">(integer) 11</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; SET time demo</span><br><span class="line">OK</span><br><span class="line">&gt; TTL time              #默认存活时间</span><br><span class="line">(integer) -1</span><br><span class="line">&gt; EXPIRE time 120       #让time存活时间为120秒</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; TTL time              #查看键的存活时间</span><br><span class="line">(integer) 118</span><br><span class="line">&gt; TTL time              #查看键的存活时间</span><br><span class="line">(integer) 112</span><br><span class="line">&gt; TTL time</span><br><span class="line">(integer) -2</span><br><span class="line"></span><br><span class="line"><span class="comment">##################################################</span></span><br><span class="line">TTL值-2表示该键已不存在,-1表示永久存在(默认键值TTL均为-1)</span><br><span class="line"><span class="comment">##################################################</span></span><br></pre></td></tr></table></figure>
+<h2 id="List类型"><a href="#List类型" class="headerlink" title="List类型"></a>List类型</h2><blockquote>
+<p>RPUSH,RPOP的R为right.LPUSH,LPOP的L为left<br>LRANGE,LLEN中的L为list</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
-<p>搞定homebrew后，安装pwntools十分<strong>简单且迅速</strong>  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install pwntools</span><br></pre></td></tr></table></figure>
-<p>等待片刻就安装完成，自动解决各种依赖关系以及环境变量,可在终端中直接使用checksec及cyclic等命令,不需要自己手动去额外操作。 </p>
-<p>安装完后会在<code>/usr/local/Cellar/</code>下生成<code>pwntools</code>文件夹，不用管它，我们只需要用到这个路径  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/Cellar/pwntools/3.12.1/libexec/lib/python2.7/site-packages</span><br></pre></td></tr></table></figure>
-<p>里面包含了pwntools所需要的各种<code>python</code>相关文件,终端中cd进入然后pwd复制路径</p>
-<blockquote>
-<p>这里需要大家自行去了解一下python的.pth文件作用</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&gt; RPUSH friends Alice   #右推入一个value</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; RPUSH friends Bob     #右推入一个value</span><br><span class="line">(integer) 2</span><br><span class="line">&gt; LPUSH friends Sam     #左推入一个value</span><br><span class="line">(integer) 3</span><br><span class="line"></span><br><span class="line"><span class="comment">######################################</span></span><br><span class="line">此时键friends里存有3个值(Sam-&gt;Alice-&gt;Bob)</span><br><span class="line"><span class="comment">######################################</span></span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; LRANGE friends 0 -1   #查看列表范围全部结果(-1表示最后一位)</span><br><span class="line">1) "Sam"</span><br><span class="line">2) "Alice"</span><br><span class="line">3) "Bob"</span><br><span class="line">&gt; LRANGE friends 0 1    #查看列表范围内前两位</span><br><span class="line">1) "Sam"</span><br><span class="line">2) "Alice"</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; LLEN friends          #查看列表长度(即有几个value)</span><br><span class="line">(integer) 3</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; LPOP friends          #推出最左边的值(Sam)</span><br><span class="line">"Sam"</span><br><span class="line">&gt; RPOP friends          #推出最右边的值(Bob)</span><br><span class="line">"Bob"</span><br></pre></td></tr></table></figure>
+<h2 id="SET类型"><a href="#SET类型" class="headerlink" title="SET类型"></a>SET类型</h2><blockquote>
+<p>SET类型为集合,有数学基础的都能大概理解了吧</p>
 </blockquote>
-<p>然后只需把这个文件夹添加到<code>python</code>的<code>sys.path</code>中,方法如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cd /Library/Python/2.7/site-packages</span><br><span class="line">$ sudo vim mypkpath.pth     #进入后i进入编辑模式然后将前面的路径黏贴进来，ESC然后输入:wq即可</span><br><span class="line">$ cat mypkpath.pth          #cat可以查看到里面内容</span><br><span class="line">/usr/local/Cellar/pwntools/3.6.1/libexec/lib/python2.7/site-packages</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>pwntools这样就装完了，是不是很简便</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&gt; sadd superpowers "flight"         #添加键值</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; sadd superpowers "x-ray vision"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; sadd superpowers "reflexes"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; srem superpowers "reflexes"       #移除指定值</span><br><span class="line">1</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; sismember superpowers "flight"    #判断键中是否存在该值</span><br><span class="line">(integer) 1                         <span class="comment">#结果为布尔值</span></span><br><span class="line">&gt; smembers superpowers              #列出键的所有值</span><br><span class="line">1) "x-ray vision"</span><br><span class="line">2) "flight"</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; sadd birdpowers "pecking"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; sadd birdpowers "flight"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; sunion superpowers birdpowers     #组合两个集合</span><br><span class="line">1) "pecking"</span><br><span class="line">2) "flight"                         <span class="comment">#不会有重复的值</span></span><br><span class="line">3) "x-ray vision"</span><br><span class="line"></span><br><span class="line"><span class="comment">#################################</span></span><br><span class="line">此类型属于无序集合,对结果没有任何的排序</span><br><span class="line"><span class="comment">#################################</span></span><br></pre></td></tr></table></figure>
+<h2 id="Sorted-Sets类型"><a href="#Sorted-Sets类型" class="headerlink" title="Sorted Sets类型"></a>Sorted Sets类型</h2><blockquote>
+<p>因此,我们需要能够排序的集合类型,开头字母用Z表示<br>你能认出下面这些人分别是谁吗</p>
 </blockquote>
-<p>接下来测试一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ python2.7     #本人电脑装了python3,所以pip以及python命令都需要加上版本</span><br><span class="line">&gt;&gt;&gt; import pwn  #from pwn import * 也可以，自行区别两种方法的不同</span><br></pre></td></tr></table></figure>
-<p><strong>这步不报错你已经成功了一半了!</strong></p>
-<p>报错本人碰到两种情况</p>
-<ol>
-<li>找不到pwn包<br>先写个如下py脚本  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">list = sys.path</span><br><span class="line">print(list)</span><br><span class="line">sys.path.append(<span class="string">'/usr/local/Cellar/pwntools/3.12.1/libexec/lib/python2.7/site-packages'</span>)</span><br><span class="line">print(list)</span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>没有问题的话就去确认之前写的pth文件<br>如果pth文件没写错的话，退出python重新试几次应该就可以了  </p>
-<ol start="2">
-<li>ImportError: cannot import name _remove_dead_weakref<br>此问题是因为之前用brew安装过python2.7，导致brew安装的python与系统python引用产生混乱。<br>删除brew安装的python2.7即可<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 删除brew安装的`python@2`</span><br><span class="line">brew uninstall --ignore-dependencies --force python@2</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>再次打开python，继续测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$  python2.7</span><br><span class="line">&gt;&gt;&gt;import pwn</span><br><span class="line">&gt;&gt;&gt;pwn.asm(&quot;xor eax,eax&quot;)</span><br><span class="line">&apos;1\xc0&apos;         #输出此项即表示没问题</span><br></pre></td></tr></table></figure></p>
-<p>此处正常情况应该会报错，提示你需要安装二进制工具binutils</p>
-<hr>
-<h2 id="安装binutils-二进制工具"><a href="#安装binutils-二进制工具" class="headerlink" title="安装binutils(二进制工具)"></a>安装binutils(二进制工具)</h2><p>同样使用homebrew即可快速安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install https://raw.githubusercontent.com/Gallopsled/pwntools-binutils/master/osx/binutils-$ARCH.rb</span><br></pre></td></tr></table></figure></p>
-<p><strong>关键来了</strong> 不要盲目复制,这里$ARCH需要替换成自己电脑的架构。<br>但是架构这玩意我百度半天没有一个能用的方法,最后本人使用了盲猜,现在电脑一般都是64位系统,所以盲猜了一手amd64，那么命令如下:(是的，我成功了)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install https://raw.githubusercontent.com/Gallopsled/pwntools-binutils/master/osx/binutils-amd64.rb</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>建议还是自行找找查看架构的方法，<del>盲猜大法好</del></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&gt; ZADD hackers 1940 "Alan Kay"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; ZADD hackers 1906 "Grace Hopper"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; ZADD hackers 1953 "Richard Stallman"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; ZADD hackers 1965 "Yukihiro Matsumoto"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; ZADD hackers 1916 "Claude Shannon"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; ZADD hackers 1969 "Linus Torvalds"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; ZADD hackers 1957 "Sophie Wilson"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; ZADD hackers 1912 "Alan Turing"</span><br><span class="line">(integer) 1</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; zrange hackers 0 -1</span><br><span class="line">1) "Grace Hopper"</span><br><span class="line">2) "Alan Turing"</span><br><span class="line">3) "Claude Shannon"</span><br><span class="line">4) "Alan Kay"</span><br><span class="line">5) "Richard Stallman"</span><br><span class="line">6) "Sophie Wilson"</span><br><span class="line">7) "Yukihiro Matsumoto"</span><br><span class="line">8) "Linus Torvalds"</span><br><span class="line"></span><br><span class="line"><span class="comment">####################################################</span></span><br><span class="line">有序集合同样不会保留重复的值,并会从左往右按照数字的大小进行排序</span><br><span class="line"><span class="comment">####################################################</span></span><br></pre></td></tr></table></figure>
+<h2 id="Hashes类型"><a href="#Hashes类型" class="headerlink" title="Hashes类型"></a>Hashes类型</h2><blockquote>
+<p>哈希类型是一个键值对的集合,一看就适合用来存储对象</p>
 </blockquote>
-<p><strong>最后尝试一下pwntools测试</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$  python2.7</span><br><span class="line">&gt;&gt;&gt;import pwn</span><br><span class="line">&gt;&gt;&gt;pwn.asm(&quot;xor eax,eax&quot;)</span><br><span class="line">&apos;1\xc0&apos;     #输出成功则完结撒花</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>pwntools是目前见过最难装的python库了.<br>本人遇到大致就这些坑，至此算是全部填完了.<br>一路上各种百度各种不靠谱，谷歌里老外的解决方法也不好使，反而是找到几个国人的blog非常有用:)这里贴一下他们的blog吧<br><a href="http://pwdme.cc/2017/09/09/mac-install-pwntools/" target="_blank" rel="noopener">pwdme.cc</a><br><a href="https://roytse.github.io/2017/07/23/%E5%85%B3%E4%BA%8EOS_X%E5%AE%89%E8%A3%85pwntools%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B" target="_blank" rel="noopener">roytse.github.io</a><br>别的应该也不会有什么大问题了，百度一下应该都是可以解决的</p>
-<blockquote>
-<p>说了这么多，不会pwn又有什么用呢:(</p>
-</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&gt; HSET user1000 name "John Smith"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; HSET user1000 email "john.smith@example.com"</span><br><span class="line">(integer) 1</span><br><span class="line">&gt; HSET user1000 password "s3cret"</span><br><span class="line">(integer) 1</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; HGETALL user1000</span><br><span class="line">1) "name"</span><br><span class="line">2) "John Smith"</span><br><span class="line">3) "email"</span><br><span class="line">4) "john.smith@example.com"</span><br><span class="line">5) "password"</span><br><span class="line">6) "s3cret"</span><br><span class="line"><span class="comment">-------------------------------------------</span></span><br><span class="line"></span><br><span class="line">&gt; HMSET user1001 name "Mary Jones" password "hidden" email "mjones@example.com"</span><br><span class="line">OK</span><br><span class="line">&gt; HGET user1001 name</span><br><span class="line">"Mary Jones"</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -479,12 +451,12 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>mac下安装pwntools</p>
+  <p><span>本文标题:</span>Redis快速入门</p>
   <p><span>文章作者:</span>Herm1t</p>
-  <p><span>发布时间:</span>2018年12月22日 - 19:22:41</p>
-  <p><span>最后更新:</span>2019年04月13日 - 00:16:32</p>
-  <p><span>原始链接:</span><a href="/MAC/mac下安装pwntools/" title="mac下安装pwntools">https://herm1t.tk/MAC/mac下安装pwntools/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://herm1t.tk/MAC/mac下安装pwntools/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年07月11日 - 15:22:10</p>
+  <p><span>最后更新:</span>2019年07月11日 - 15:30:12</p>
+  <p><span>原始链接:</span><a href="/Redis/Redis快速入门/" title="Redis快速入门">https://herm1t.tk/Redis/Redis快速入门/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://herm1t.tk/Redis/Redis快速入门/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -545,7 +517,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/安装pwntools/" rel="tag"># 安装pwntools</a>
+            <a href="/tags/Redis基础/" rel="tag"># Redis基础</a>
           
         </div>
       
@@ -567,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/mysql/mysql基础/" rel="next" title="mysql基础">
-                <i class="fa fa-chevron-left"></i> mysql基础
+              <a href="/bin/汇编速记/" rel="next" title="汇编速记">
+                <i class="fa fa-chevron-left"></i> 汇编速记
               </a>
             
           </div>
@@ -576,10 +548,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/python/pipenv快速上手/" rel="prev" title="pipenv快速上手">
-                pipenv快速上手 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -775,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避坑警告"><span class="nav-number">2.</span> <span class="nav-text">避坑警告</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装pwntools"><span class="nav-number">3.</span> <span class="nav-text">安装pwntools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装binutils-二进制工具"><span class="nav-number">4.</span> <span class="nav-text">安装binutils(二进制工具)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需要做的准备"><span class="nav-number">2.</span> <span class="nav-text">需要做的准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis连接"><span class="nav-number">3.</span> <span class="nav-text">Redis连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本类型"><span class="nav-number">4.</span> <span class="nav-text">基本类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List类型"><span class="nav-number">5.</span> <span class="nav-text">List类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SET类型"><span class="nav-number">6.</span> <span class="nav-text">SET类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sorted-Sets类型"><span class="nav-number">7.</span> <span class="nav-text">Sorted Sets类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hashes类型"><span class="nav-number">8.</span> <span class="nav-text">Hashes类型</span></a></li></ol></div>
             
 
           </div>
