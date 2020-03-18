@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://herm1t.tk/"/>
+  <link href="https://zoomgod.github.io/"/>
   <updated>2019-07-11T07:30:12.293Z</updated>
-  <id>https://herm1t.tk/</id>
+  <id>https://zoomgod.github.io/</id>
   
   <author>
     <name>Herm1t</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Redis快速入门</title>
-    <link href="https://herm1t.tk/Redis/Redis%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>https://herm1t.tk/Redis/Redis快速入门/</id>
+    <link href="https://zoomgod.github.io/Redis/Redis%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
+    <id>https://zoomgod.github.io/Redis/Redis快速入门/</id>
     <published>2019-07-11T07:22:10.000Z</published>
     <updated>2019-07-11T07:30:12.293Z</updated>
     
@@ -41,17 +41,17 @@
     
     </summary>
     
-      <category term="Redis" scheme="https://herm1t.tk/categories/Redis/"/>
+      <category term="Redis" scheme="https://zoomgod.github.io/categories/Redis/"/>
     
     
-      <category term="Redis基础" scheme="https://herm1t.tk/tags/Redis%E5%9F%BA%E7%A1%80/"/>
+      <category term="Redis基础" scheme="https://zoomgod.github.io/tags/Redis%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>汇编速记</title>
-    <link href="https://herm1t.tk/bin/%E6%B1%87%E7%BC%96%E9%80%9F%E8%AE%B0/"/>
-    <id>https://herm1t.tk/bin/汇编速记/</id>
+    <link href="https://zoomgod.github.io/bin/%E6%B1%87%E7%BC%96%E9%80%9F%E8%AE%B0/"/>
+    <id>https://zoomgod.github.io/bin/汇编速记/</id>
     <published>2019-06-24T14:21:24.000Z</published>
     <updated>2019-06-24T15:17:25.407Z</updated>
     
@@ -69,17 +69,17 @@
     
     </summary>
     
-      <category term="bin" scheme="https://herm1t.tk/categories/bin/"/>
+      <category term="bin" scheme="https://zoomgod.github.io/categories/bin/"/>
     
     
-      <category term="汇编" scheme="https://herm1t.tk/tags/%E6%B1%87%E7%BC%96/"/>
+      <category term="汇编" scheme="https://zoomgod.github.io/tags/%E6%B1%87%E7%BC%96/"/>
     
   </entry>
   
   <entry>
     <title>pipenv快速上手</title>
-    <link href="https://herm1t.tk/python/pipenv%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
-    <id>https://herm1t.tk/python/pipenv快速上手/</id>
+    <link href="https://zoomgod.github.io/python/pipenv%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
+    <id>https://zoomgod.github.io/python/pipenv快速上手/</id>
     <published>2019-04-12T16:20:26.000Z</published>
     <updated>2019-04-12T16:31:51.378Z</updated>
     
@@ -99,17 +99,17 @@
     
     </summary>
     
-      <category term="python" scheme="https://herm1t.tk/categories/python/"/>
+      <category term="python" scheme="https://zoomgod.github.io/categories/python/"/>
     
     
-      <category term="pipenv快速上手" scheme="https://herm1t.tk/tags/pipenv%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
+      <category term="pipenv快速上手" scheme="https://zoomgod.github.io/tags/pipenv%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
     
   </entry>
   
   <entry>
     <title>mac下安装pwntools</title>
-    <link href="https://herm1t.tk/MAC/mac%E4%B8%8B%E5%AE%89%E8%A3%85pwntools/"/>
-    <id>https://herm1t.tk/MAC/mac下安装pwntools/</id>
+    <link href="https://zoomgod.github.io/MAC/mac%E4%B8%8B%E5%AE%89%E8%A3%85pwntools/"/>
+    <id>https://zoomgod.github.io/MAC/mac下安装pwntools/</id>
     <published>2018-12-22T11:22:41.000Z</published>
     <updated>2019-04-12T16:16:32.937Z</updated>
     
@@ -128,17 +128,17 @@
     
     </summary>
     
-      <category term="MAC" scheme="https://herm1t.tk/categories/MAC/"/>
+      <category term="MAC" scheme="https://zoomgod.github.io/categories/MAC/"/>
     
     
-      <category term="安装pwntools" scheme="https://herm1t.tk/tags/%E5%AE%89%E8%A3%85pwntools/"/>
+      <category term="安装pwntools" scheme="https://zoomgod.github.io/tags/%E5%AE%89%E8%A3%85pwntools/"/>
     
   </entry>
   
   <entry>
     <title>mysql基础</title>
-    <link href="https://herm1t.tk/mysql/mysql%E5%9F%BA%E7%A1%80/"/>
-    <id>https://herm1t.tk/mysql/mysql基础/</id>
+    <link href="https://zoomgod.github.io/mysql/mysql%E5%9F%BA%E7%A1%80/"/>
+    <id>https://zoomgod.github.io/mysql/mysql基础/</id>
     <published>2018-12-21T08:16:13.000Z</published>
     <updated>2019-04-12T16:14:00.195Z</updated>
     
@@ -160,17 +160,17 @@
     
     </summary>
     
-      <category term="mysql" scheme="https://herm1t.tk/categories/mysql/"/>
+      <category term="mysql" scheme="https://zoomgod.github.io/categories/mysql/"/>
     
     
-      <category term="mysql基础" scheme="https://herm1t.tk/tags/mysql%E5%9F%BA%E7%A1%80/"/>
+      <category term="mysql基础" scheme="https://zoomgod.github.io/tags/mysql%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>从零开始搭博客[1]--进阶篇</title>
-    <link href="https://herm1t.tk/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B1%5D--%E8%BF%9B%E9%98%B6%E7%AF%87/"/>
-    <id>https://herm1t.tk/blog搭建/从零开始搭博客[1]--进阶篇/</id>
+    <link href="https://zoomgod.github.io/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B1%5D--%E8%BF%9B%E9%98%B6%E7%AF%87/"/>
+    <id>https://zoomgod.github.io/blog搭建/从零开始搭博客[1]--进阶篇/</id>
     <published>2018-12-04T14:37:07.000Z</published>
     <updated>2018-12-21T08:53:11.640Z</updated>
     
@@ -193,17 +193,17 @@
     
     </summary>
     
-      <category term="blog搭建" scheme="https://herm1t.tk/categories/blog%E6%90%AD%E5%BB%BA/"/>
+      <category term="blog搭建" scheme="https://zoomgod.github.io/categories/blog%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="blog进阶" scheme="https://herm1t.tk/tags/blog%E8%BF%9B%E9%98%B6/"/>
+      <category term="blog进阶" scheme="https://zoomgod.github.io/tags/blog%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>从零开始搭博客[0]--基础篇</title>
-    <link href="https://herm1t.tk/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B0%5D--%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
-    <id>https://herm1t.tk/blog搭建/从零开始搭博客[0]--基础篇/</id>
+    <link href="https://zoomgod.github.io/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B0%5D--%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+    <id>https://zoomgod.github.io/blog搭建/从零开始搭博客[0]--基础篇/</id>
     <published>2018-12-03T14:56:17.000Z</published>
     <updated>2018-12-21T08:53:04.210Z</updated>
     
@@ -226,17 +226,17 @@
     
     </summary>
     
-      <category term="blog搭建" scheme="https://herm1t.tk/categories/blog%E6%90%AD%E5%BB%BA/"/>
+      <category term="blog搭建" scheme="https://zoomgod.github.io/categories/blog%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="blog基础" scheme="https://herm1t.tk/tags/blog%E5%9F%BA%E7%A1%80/"/>
+      <category term="blog基础" scheme="https://zoomgod.github.io/tags/blog%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>索引</title>
-    <link href="https://herm1t.tk/uncategorized/%E7%B4%A2%E5%BC%95/"/>
-    <id>https://herm1t.tk/uncategorized/索引/</id>
+    <link href="https://zoomgod.github.io/uncategorized/%E7%B4%A2%E5%BC%95/"/>
+    <id>https://zoomgod.github.io/uncategorized/索引/</id>
     <published>2018-11-12T14:51:36.000Z</published>
     <updated>2019-07-11T07:32:52.184Z</updated>
     
@@ -250,14 +250,14 @@
     </summary>
     
     
-      <category term="索引" scheme="https://herm1t.tk/tags/%E7%B4%A2%E5%BC%95/"/>
+      <category term="索引" scheme="https://zoomgod.github.io/tags/%E7%B4%A2%E5%BC%95/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://herm1t.tk/uncategorized/hello-world/"/>
-    <id>https://herm1t.tk/uncategorized/hello-world/</id>
+    <link href="https://zoomgod.github.io/uncategorized/hello-world/"/>
+    <id>https://zoomgod.github.io/uncategorized/hello-world/</id>
     <published>2018-11-11T14:51:36.000Z</published>
     <updated>2018-12-03T15:45:59.500Z</updated>
     
