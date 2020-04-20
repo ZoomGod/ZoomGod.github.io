@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2018/12/03/FMg8RP.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/12/03/FMgYM8.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/12/03/FMgGxf.png">
-<meta property="og:updated_time" content="2018-12-21T08:53:04.210Z">
+<meta property="og:updated_time" content="2020-04-20T03:46:32.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始搭博客[0]--基础篇">
 <meta name="twitter:description" content="作为一个大佬，私人博客必不可少那么，教大家5分钟做出私人博客 [完全免费]只需短短四步，即可搭出可以使用的私人博客  概览 需要做的准备 第一步:装装装 第二步:配配配 第三步:改改改 第四步:写写写   是不是看起来很简单，尝试一下吧!">
@@ -364,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  956
+                  957
                 </span>
               
 
@@ -431,18 +431,18 @@
 <hr>
 <h2 id="第三步：改代码，让别人能在互联网上访问你"><a href="#第三步：改代码，让别人能在互联网上访问你" class="headerlink" title="第三步：改代码，让别人能在互联网上访问你"></a>第三步：改代码，让别人能在互联网上访问你</h2><blockquote>
 <p><strong>注</strong> 本来想说放在github上的，想了想还是推荐放在coding上，国内访问起来比较快</p>
+</blockquote>
 <ol>
 <li>注册coding  <a href="https://coding.net/register" target="_blank" rel="noopener">https://coding.net/register</a></li>
 <li>修改用户名，之后的博客地址就是  <strong><em>用户名.coding.me</em></strong></li>
 <li>新建项目  <a href="https://coding.net/user/projects" target="_blank" rel="noopener">https://coding.net/user/projects</a><br><img src="https://s1.ax1x.com/2018/12/03/FMg8RP.png" alt="FMg8RP.png"></li>
 <li>项目名称与自己用户名相同，其他默认，点击新建项目<br><img src="https://s1.ax1x.com/2018/12/03/FMgYM8.png" alt="FMgYM8.png"></li>
 <li>进入自己的新建项目，将右下角地址复制下来<br><img src="https://s1.ax1x.com/2018/12/03/FMgGxf.png" alt="FMgGxf.png"></li>
-<li>点开hexo文件夹中的_config.yml，拉到最底下，将代码补全为以下代码后保存退出<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:                     #冒号后面的空格不能少</span><br><span class="line">    type: git</span><br><span class="line">    repo: 你复制的地址</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<li><p>点开hexo文件夹中的_config.yml，拉到最底下，将代码补全为以下代码后保存退出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:                     #冒号后面的空格不能少</span><br><span class="line">    type: git</span><br><span class="line">    repo: 你复制的地址</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-</blockquote>
-<ol start="7">
-<li>最后在git bash中输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;你的邮箱&quot;           #这里主要是上传时标记上传者是谁，在团队合作时比较重要</span><br><span class="line">git config --global user.name &quot;你的用户名&quot;          #同上</span><br><span class="line">hexo clean          #清除</span><br><span class="line">hexo g              #生成页面</span><br><span class="line">hexo deploy         #部署页面(即上传)</span><br></pre></td></tr></table></figure>
+<li><p>最后在git bash中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;你的邮箱&quot;           #这里主要是上传时标记上传者是谁，在团队合作时比较重要</span><br><span class="line">git config --global user.name &quot;你的用户名&quot;          #同上</span><br><span class="line">hexo clean          #清除</span><br><span class="line">hexo g              #生成页面</span><br><span class="line">hexo deploy         #部署页面(即上传)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>hexo deploy时需要输入coding账号的用户名和密码</p>
@@ -480,7 +480,7 @@
   <p><span>本文标题:</span>从零开始搭博客[0]--基础篇</p>
   <p><span>文章作者:</span>Herm1t</p>
   <p><span>发布时间:</span>2018年12月03日 - 22:56:17</p>
-  <p><span>最后更新:</span>2018年12月21日 - 16:53:04</p>
+  <p><span>最后更新:</span>2020年04月20日 - 11:46:32</p>
   <p><span>原始链接:</span><a href="/blog搭建/从零开始搭博客[0]--基础篇/" title="从零开始搭博客[0]--基础篇">https://zoomgod.github.io/blog搭建/从零开始搭博客[0]--基础篇/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://zoomgod.github.io/blog搭建/从零开始搭博客[0]--基础篇/" aria-label="复制成功！"></i></span>
   </p>

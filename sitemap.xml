@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zoomgod.github.io/bin/%E6%B1%87%E7%BC%96%E9%80%9F%E8%AE%B0/</loc>
+    
+    <lastmod>2020-04-20T03:48:14.820Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zoomgod.github.io/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B0%5D--%E5%9F%BA%E7%A1%80%E7%AF%87/</loc>
+    
+    <lastmod>2020-04-20T03:46:32.692Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zoomgod.github.io/uncategorized/%E7%B4%A2%E5%BC%95/</loc>
     
     <lastmod>2020-03-28T05:49:59.599Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://zoomgod.github.io/Redis/Redis%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2019-07-11T07:30:12.293Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zoomgod.github.io/bin/%E6%B1%87%E7%BC%96%E9%80%9F%E8%AE%B0/</loc>
-    
-    <lastmod>2019-06-24T15:17:25.407Z</lastmod>
     
   </url>
   
@@ -54,13 +61,6 @@
     <loc>https://zoomgod.github.io/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B1%5D--%E8%BF%9B%E9%98%B6%E7%AF%87/</loc>
     
     <lastmod>2018-12-21T08:53:11.640Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zoomgod.github.io/blog%E6%90%AD%E5%BB%BA/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%8D%9A%E5%AE%A2%5B0%5D--%E5%9F%BA%E7%A1%80%E7%AF%87/</loc>
-    
-    <lastmod>2018-12-21T08:53:04.210Z</lastmod>
     
   </url>
   
